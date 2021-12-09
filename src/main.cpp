@@ -39,8 +39,6 @@ void setup()
   setupWebServer();
 
   CreateRoutineTasks();
-
-
 }
 
 void loop()
