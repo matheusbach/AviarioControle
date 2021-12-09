@@ -4,6 +4,7 @@
 #include "Arduino.h"
 #include "Wire.h"
 #include "string"
+#include <AsyncElegantOTA.h>;
 
 const char *http_username = "";
 const char *http_password = "bach";
@@ -161,5 +162,6 @@ void setupWebServer()
         request->send(200, "text/plain", String(returnLocalTime().c_str()));
     });
 
+    AsyncElegantOTA.begin(&server);
     server.begin();
 }
