@@ -11,7 +11,6 @@ const char *password = "1234567890";
 void StartNetWorkConnection()
 {
   WiFi.mode(WIFI_STA);
-  WiFi.setTxPower(WIFI_POWER_18_5dBm);
   WiFi.begin(ssid, password);
 }
 

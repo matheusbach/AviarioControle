@@ -18,6 +18,7 @@ void setupWebServer();
 void DoVentilacaoMinima(void *parameter);
 void definePins();
 void TransmitInfoToWebServerClients();
+void setupTelegramBot();
 void VerificarMensagensTelegram(void *parameter);
 
 void configReset();

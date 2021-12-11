@@ -38,6 +38,8 @@ void setup()
 
   setupWebServer();
 
+  setupTelegramBot();
+
   CreateRoutineTasks();
 }
 

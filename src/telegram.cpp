@@ -10,20 +10,20 @@ UniversalTelegramBot bot(telegramBotToken, wiFiClientSecure);
 
 String GeneralInfoMessage()
 {
-    char temp[6];
-    char umid[6];
-    char rssi[4];
-    dtostrf(temperatura, 6, 1, temp);
-    dtostrf(umidade, 6, 0, umid);
-    dtostrf(RSSI, 4, 0, rssi);
+    char temp[24];
+    char umid[24];
+    char rssi[24];
+    dtostrf(temperatura, 4, 1, temp);
+    dtostrf(umidade, 2, 0, umid);
+    dtostrf(RSSI, 3, 0, rssi);
 
     String mensagem;
-    mensagem +="Aviário - Painel de Controle\n";
-    mensagem += "Temperatura: " + (String)temp + " oC\n";
+    mensagem += "*Aviário - Painel de Controle*\n";
+    mensagem += "Temperatura: " + (String)temp + " ºC\n";
     mensagem += "Umidade: " + (String)umid + " %\n";
-    mensagem += "Sinal Wifi: " + (String)rssi + " %\n";
+    mensagem += "Sinal Wifi: " + (String)rssi + " dBi\n";
     mensagem += "\n";
-    mensagem += "\nAtualizado em " + (String)returnLocalTime().c_str();
+    mensagem += "Atualizado em " + (String)returnLocalTime().c_str();
     return mensagem;
 }
 
@@ -50,7 +50,7 @@ void ProcessarNovasMensagens(int numNewMessages)
 
         if (mensagem == "/info")
         {
-            bot.sendMessage(chat_id, GeneralInfoMessage(), "");
+            bot.sendMessage(chat_id, GeneralInfoMessage(), "Markdown");
         }
     }
 }
