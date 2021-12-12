@@ -10,18 +10,20 @@ const char *password = "1234567890";
 
 void StartNetWorkConnection()
 {
-  WiFi.mode(WIFI_STA);
+  WiFi.mode(WIFI_MODE_STA);
   WiFi.begin(ssid, password);
+  WiFi.setAutoConnect(true);
+  WiFi.setAutoReconnect(true);
 }
 
 void CheckNetworkConnection(void *parameter)
 {
   while (true)
   {
-    if (WiFi.status() != WL_CONNECTED)
+    if (!WiFi.isConnected())
     {
-      Serial.println("Tentando reconectar ao WiFi..");
-      WiFi.reconnect();
+      Serial.println("Wifi está desconectado");
+     // WiFi.reconnect();
     }
 
     vTaskDelay(10000 / portTICK_PERIOD_MS);
