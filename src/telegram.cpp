@@ -64,15 +64,17 @@ void VerificarMensagensTelegram(void *parameter)
 {
     while (true)
     {
-        int numNewMessages = bot.getUpdates(bot.last_message_received + 1);
-
-        while (numNewMessages)
+        if (WiFi.isConnected())
         {
-            Serial.println("got response");
-            ProcessarNovasMensagens(numNewMessages);
-            numNewMessages = bot.getUpdates(bot.last_message_received + 1);
-        }
+            int numNewMessages = bot.getUpdates(bot.last_message_received + 1);
 
+            while (numNewMessages)
+            {
+                Serial.println("got telegram response");
+                ProcessarNovasMensagens(numNewMessages);
+                numNewMessages = bot.getUpdates(bot.last_message_received + 1);
+            }
+        }
         vTaskDelay(5000 / portTICK_PERIOD_MS);
     }
 }
