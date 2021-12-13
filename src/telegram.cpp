@@ -75,6 +75,6 @@ void VerificarMensagensTelegram(void *parameter)
                 numNewMessages = bot.getUpdates(bot.last_message_received + 1);
             }
         }
-        vTaskDelay(5000 / portTICK_PERIOD_MS);
+        vTaskDelay(3000 / portTICK_PERIOD_MS);
     }
 }
