@@ -35,27 +35,3 @@ void UpdateRSSI(void *parameter)
     vTaskDelay(10000 / portTICK_PERIOD_MS);
   }
 }
-
-const char *toStr(wl_status_t status)
-{
-  switch (status)
-  {
-  case WL_NO_SHIELD:
-    return "No shield";
-  case WL_IDLE_STATUS:
-    return "Idle status";
-  case WL_NO_SSID_AVAIL:
-    return "No SSID avail";
-  case WL_SCAN_COMPLETED:
-    return "Scan compleded";
-  case WL_CONNECTED:
-    return "Connected";
-  case WL_CONNECT_FAILED:
-    return "Failed";
-  case WL_CONNECTION_LOST:
-    return "Connection lost";
-  case WL_DISCONNECTED:
-    return "Disconnected";
-  }
-  return "Unknown";
-}

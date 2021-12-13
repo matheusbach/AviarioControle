@@ -43,7 +43,7 @@ void ProcessarNovasMensagens(int numNewMessages)
         {
             String mensagem = "Bem-vindo, " + from_name + ".\n";
             mensagem += "Para ler as informações básicas dos sensores use o comando abaixo.\n\n";
-            mensagem += "/info \n";
+            mensagem += "/info";
             bot.sendMessage(chat_id, mensagem, "");
         }
 
