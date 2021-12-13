@@ -38,10 +38,17 @@ String processor(const String &var)
     //Serial.println(var);
     if (var == "BUTTONPLACEHOLDER")
     {
-        String buttons;
+        String htmlCode;
         String outputStateValue = outputState(ventiladorPin);
-        buttons += "<div class=\"card card-switch\"><h4><i class=\"fas fa-lightbulb\"></i> Ventilação Mínima</h4><label class=\"switch\"><input type=\"checkbox\" onchange=\"controlVentMin(this)\" id=\"ventMinCkeckBox\" ><span class=\"slider\"></span></label></div>";
-        return buttons;
+        htmlCode += "<div class=\"card card-switch\"><h4><i class=\"fas fa-lightbulb\"></i> Ventilação Mínima</h4><label class=\"switch\"><input type=\"checkbox\" onchange=\"controlVentMin(this)\" id=\"ventMinCkeckBox\" ><span class=\"slider\"></span></label></div>";
+        return htmlCode;
+    }
+    if (var == "VERSIONLABELPLACEHOLDER")
+    {
+        String htmlCode;
+        String outputStateValue = outputState(ventiladorPin);
+        htmlCode += "<h5><i class=\"fas fa-tag\"> versão " + (String)versionLabel + "</h5></i>";
+        return htmlCode;
     }
     return String();
 }

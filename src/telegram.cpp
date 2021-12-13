@@ -51,6 +51,11 @@ void ProcessarNovasMensagens(int numNewMessages)
         {
             bot.sendMessage(chat_id, GeneralInfoMessage(), "Markdown");
         }
+
+        if (mensagem == "/v")
+        {
+            bot.sendMessage(chat_id, "versão " + (String)versionLabel, "");
+        }
     }
 }
 

@@ -56,6 +56,7 @@ const char index_html[] PROGMEM = R"rawliteral(
   </div>
 </div>
 <h4><i class="far fa-clock icon-pointer" onclick="getPageData()"> Atualizado <span id="lastUpdatedTime"></span></h4></i>
+%VERSIONLABELPLACEHOLDER%
 <script>
 function logoutButton() {
   var xhr = new XMLHttpRequest();
