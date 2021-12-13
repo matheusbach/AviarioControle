@@ -1,7 +1,3 @@
-#include <SPIFFS.h>
-#include <ArduinoJson.h>
-#include "Arduino.h"
-
 #include "headers.h"
 
 const size_t JSON_SIZE = JSON_OBJECT_SIZE(5) + 96;

@@ -9,10 +9,9 @@ float sensorHumidityOffsetBias = 0;
 
 #define DHTPIN 23 // Digital pin connected to the DHT sensor
 
-// Uncomment the type of sensor in use:
 #define DHTTYPE DHT11 // DHT 11
 
-    DHT dht(DHTPIN, DHTTYPE);
+DHT dht(DHTPIN, DHTTYPE);
 
 void StartSensores()
 {

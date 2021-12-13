@@ -1,9 +1,6 @@
-#include "ESPAsyncWebServer.h"
 #include "headers.h"
+#include "ESPAsyncWebServer.h"
 #include "webpage/pagina.cpp"
-#include "Arduino.h"
-#include "Wire.h"
-#include "string"
 #include "AsyncElegantOTA.h"
 
 const char *http_username = "";

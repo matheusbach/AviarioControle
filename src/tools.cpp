@@ -1,8 +1,4 @@
-
-#include "esp_wifi.h"
-#include "Arduino.h"
 #include "headers.h"
-#include "string"
 
 String dateTimePaddingLeft(int datetimeUnpadded)
 {

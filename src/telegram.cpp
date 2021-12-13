@@ -1,6 +1,5 @@
 #include <WiFiClientSecure.h>
 #include <UniversalTelegramBot.h>
-#include <ArduinoJson.h>
 #include "headers.h"
 
 #define telegramBotToken "xxxxxxxx:xxxxxxxxxxxxxxxxxxxxx"

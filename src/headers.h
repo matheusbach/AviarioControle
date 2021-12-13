@@ -1,4 +1,11 @@
+#include "Arduino.h"
+#include <ArduinoJson.h>
 #include <string>
+#include "Wire.h"
+#include "time.h"
+#include "SPIFFS.h"
+#include "esp_wifi.h"
+#include "WiFi.h"
 
 void CreateRoutineTasks();
 void UpdateClima(void *parameter);
@@ -37,3 +44,5 @@ extern int VentilacaoMinimaTimeOff;
 extern int segundosVentilacaoMinimaActualState;
 extern int estadoAtualVentiacaoMinima;
 extern int ventiladorState;
+
+extern const char* versionLabel;

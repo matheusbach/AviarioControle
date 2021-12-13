@@ -1,8 +1,4 @@
-
-#include "Arduino.h"
 #include "headers.h"
-#include "esp_wifi.h"
-#include "WiFi.h"
 
 float RSSI = 100;
 const char *ssid = "TendaRouter";
