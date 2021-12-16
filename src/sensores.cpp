@@ -22,7 +22,7 @@ void UpdateClima(void *parameter)
 {
   while (true)
   {
-    Serial.println("lendo sensores");
+  //  Serial.println("lendo sensores");
     float tempUmidade = dht.readHumidity();
     float tempTemperatura = dht.readTemperature();
 

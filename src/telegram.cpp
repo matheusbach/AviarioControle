@@ -68,17 +68,24 @@ void VerificarMensagensTelegram(void *parameter)
 {
     while (true)
     {
+       // yield();
+
         if (WiFi.isConnected())
         {
             int numNewMessages = bot.getUpdates(bot.last_message_received + 1);
-
+           // Serial.println("got telegram response");
             while (numNewMessages)
             {
-                Serial.println("got telegram response");
+            //    Serial.println("got telegram new message");
                 ProcessarNovasMensagens(numNewMessages);
                 numNewMessages = bot.getUpdates(bot.last_message_received + 1);
             }
         }
-        vTaskDelay(3000 / portTICK_PERIOD_MS);
+        else
+        {
+           // Serial.println("no wifi, no telegram");
+        }
+        
+        vTaskDelay(5000 / portTICK_PERIOD_MS);
     }
 }

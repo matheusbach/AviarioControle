@@ -9,7 +9,7 @@ void StartNetWorkConnection()
   WiFi.mode(WIFI_MODE_STA);
   WiFi.begin(ssid, password);
   WiFi.setAutoConnect(true);
-  WiFi.setAutoReconnect(true);
+//  WiFi.setAutoReconnect(true);
 }
 
 void CheckNetworkConnection(void *parameter)
@@ -18,8 +18,11 @@ void CheckNetworkConnection(void *parameter)
   {
     if (!WiFi.isConnected())
     {
-      Serial.println("Wifi está desconectado");
-     // WiFi.reconnect();
+    //  Serial.println("Wifi está desconectado");
+      WiFi.reconnect();
+    }
+    else{
+    //  Serial.println("Wifi conectado");
     }
 
     vTaskDelay(10000 / portTICK_PERIOD_MS);

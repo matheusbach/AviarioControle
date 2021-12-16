@@ -1,9 +1,9 @@
 #include "headers.h"
 
-const char* versionLabel = "1.0";
+const char* versionLabel = "1.1";
 
 const char *ntpServer = "pool.ntp.org";
-const long gmtOffset_sec = -10800;
+const long gmtOffset_sec = -(3*60*60);
 const int daylightOffset_sec = 0;
 
 void setup()
