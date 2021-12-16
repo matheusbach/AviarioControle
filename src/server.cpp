@@ -166,6 +166,8 @@ void setupWebServer()
         request->send(200, "text/plain", String(returnLocalTime().c_str()));
     });
 
-    AsyncElegantOTA.begin(&server);
+    AsyncElegantOTA.begin(&server, "username", "password");
+    AsyncElegantOTA.setID("aviario-02");
+
     server.begin();
 }
