@@ -35,11 +35,12 @@ const char index_html[] PROGMEM = R"rawliteral(
     .card-bme{ color: #572dfb;}
     .card-motion{ color: #3b3b3b; cursor: pointer;}
     .icon-pointer{ cursor: pointer;}
+    .center-v { line-height: 1.5; display: inline-block; vertical-align: middle; }
   </style>
 </head>
 <body>
   <div class="topnav">
-    <h3>AVIÁRIO - PAINEL DE CONTROLE<span style="text-align:right;">&nbsp;&nbsp; <i class="fas fa-user-slash icon-pointer" onclick="logoutButton()"></i></span></h3>
+    <h3>AVIÁRIO - PAINEL DE CONTROLE<span style="text-align:right;">&nbsp;&nbsp; <i class="fas fa-user-slash fa-xs center-v icon-pointer" onclick="logoutButton()"></i></span></h3>
   </div>
   <div class="content">
     <div class="cards">
@@ -55,7 +56,7 @@ const char index_html[] PROGMEM = R"rawliteral(
     <!--  %BUTTONPLACEHOLDER%   -->   
   </div>
 </div>
-<h4><i class="far fa-clock icon-pointer" onclick="getPageData()"> Atualizado <span id="lastUpdatedTime"></span></h4></i>
+<h4><i class="far fa-clock icon-pointer" onClick="document.location.reload(true)"> Leitura: <span id="lastUpdatedTime"></span></h4></i>
 %VERSIONLABELPLACEHOLDER%
 <script>
 function logoutButton() {
