@@ -1,6 +1,6 @@
 #include "headers.h"
 
-const char* versionLabel = "1.1";
+const char* versionLabel = "1.2";
 
 const char *ntpServer = "pool.ntp.org";
 const long gmtOffset_sec = -(3*60*60);

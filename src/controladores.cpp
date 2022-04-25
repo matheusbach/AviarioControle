@@ -1,7 +1,5 @@
-#include "Arduino.h"
-#include "Wire.h"
 #include "headers.h"
-#include "FreeRTOS.h"
+#include "freertos/FreeRTOS.h"
 
 const int ventiladorPin = 16; // Output socket
 
